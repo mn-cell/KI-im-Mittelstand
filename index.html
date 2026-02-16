@@ -33,14 +33,13 @@
         .case-body { padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .result-box { 
             grid-column: span 2; background: #f0fdf4; border: 1px solid #bbf7d0; 
-            padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;
+            padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;
         }
         .result-val { color: var(--green); font-weight: 800; font-size: 1.2rem; }
 
         /* Phasen-System */
         .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
         .step { background: white; padding: 30px; border-radius: 10px; position: relative; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .step:hover { border-color: var(--secondary); transform: translateY(-5px); }
         .step-num { position: absolute; top: -15px; left: 20px; background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
         .step h4 { color: var(--primary); margin: 10px 0; font-size: 1.1rem; }
         .step ul { list-style: none; font-size: 0.9rem; color: #64748b; }
@@ -54,11 +53,11 @@
         .bg-gold { background: var(--secondary); }
 
         .btn { 
-            background: var(--secondary); color: white; padding: 18px 35px; 
+            background: var(--secondary); color: white !important; padding: 18px 35px; 
             text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem;
             transition: 0.3s; display: inline-block; margin-top: 20px;
         }
-        .btn-white { background: white; color: var(--primary); }
+        .btn-white { background: white; color: var(--primary) !important; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
         footer { padding: 60px 20px; text-align: center; background: #f4f7fa; border-top: 1px solid #e2e8f0; }
@@ -87,8 +86,6 @@
         <p>Ihr strukturierter Weg aus dem Pilot-Sumpf.</p>
         <div class="divider"></div>
     </div>
-
-    
 
     <div class="timeline">
         <div class="step">
@@ -140,7 +137,7 @@
         <div class="case-body">
             <div><h4>Herausforderung</h4><p>Manuelle Datenerfassung und Kommunikations-Overhead fressen Kapazitäten.</p></div>
             <div><h4>KI-Lösung</h4><p>KI-Schnittstellen automatisieren Buchungsprozesse und Onboarding-Dokumente.</p></div>
-            <div class="result-box"><span class="result-val">367,5 Std. Ersparnis / Monat</span><span style="font-weight: bold;">~ 14.862 € mtl. gespart</span></div>
+            <div class="result-box"><span class="result-val">367,5 Std. Ersparnis / Monat</span><span style="font-weight: bold; color: var(--green);">~ 14.862 € mtl. gespart</span></div>
         </div>
     </div>
 
@@ -149,37 +146,40 @@
         <div class="case-body">
             <div><h4>Herausforderung</h4><p>Büroarbeit nach Feierabend. Fehlende Details in der Dokumentation.</p></div>
             <div><h4>KI-Lösung</h4><p>Sprach-KI wandelt Sprachnotizen direkt in fertige Berichte und Aufgabenlisten um.</p></div>
-            <div class="result-box"><span class="result-val">1 Stunde Zeitvorteil täglich</span><span style="font-weight: bold;">0% Nachtarbeit im Büro</span></div>
+            <div class="result-box"><span class="result-val">1 Stunde Zeitvorteil täglich</span><span style="font-weight: bold; color: var(--green);">0% Nachtarbeit im Büro</span></div>
         </div>
     </div>
 
     <div class="case-study">
-        <div class="case-header"><h3>KI-Turbo für Dokumentation & Gutachten</h3></div>
+        <div class="case-header"><h3>Dokumentation & Gutachten</h3></div>
         <div class="case-body">
             <div><h4>Herausforderung</h4><p>Stundenlange Recherche in Bestandsdaten und manuelle Text-Erstellung.</p></div>
-            <div><h4>KI-Lösung</h4><p>Spezialisierte KI durchsucht interne Archive und erstellt Textentwürfe in Sekunden.</p></div>
-            <div class="result-box"><span class="result-val">50% Zeitersparnis bei Dokus</span><span style="font-weight: bold;">80% schnellere Recherche</span></div>
-        </div>
-    </div>
-
-    <div class="case-study">
-        <div class="case-header"><h3>Angebots-Generator 24/7</h3></div>
-        <div class="case-body">
-            <div><h4>Herausforderung</h4><p>Lange Wartezeiten für Kunden, da Angebote manuell erstellt werden müssen.</p></div>
-            <div><h4>KI-Lösung</h4><p>KI liest Anfragen aus Mails/WhatsApp und erstellt fertige Entwürfe zur Prüfung.</p></div>
-            <div class="result-box"><span class="result-val">5x schnellere Reaktionszeit</span><span style="font-weight: bold;">Höhere Abschlussquoten</span></div>
+            <div><h4>KI-Lösung</h4><p>Spezialisierte KI durchsucht Archive und erstellt Textentwürfe in Sekunden.</p></div>
+            <div class="result-box"><span class="result-val">50% Zeitersparnis bei Dokus</span><span style="font-weight: bold; color: var(--green);">80% schnellere Recherche</span></div>
         </div>
     </div>
 
     <div class="offer-grid">
         <div class="highlight-box bg-blue">
             <h3>80% BAFA-Zuschuss</h3>
-            <p>Wir sind zertifizierte Berater. Für unsere Strategie-Beratung übernimmt das BAFA bis zu 80% der Kosten. Wir prüfen das unverbindlich für Sie.</p>
+            <p>Für unsere Strategie-Beratung übernimmt das BAFA bis zu 80% der Kosten. Wir sind zertifizierte Berater und prüfen die Förderfähigkeit unverbindlich für Sie.</p>
+            <ul style="margin: 20px 0; font-size: 0.9rem;">
+                <li>✓ BAFA-Beratungsförderung</li>
+                <li>✓ Sachsen-Anhalt MEDIENPRO</li>
+                <li>✓ Sachsen-Anhalt IMPULS</li>
+            </ul>
         </div>
+        
         <div class="highlight-box bg-gold">
-            <h3>Gratis Vor-Ort Workshop am 25.03</h3>
-            <p>KI verstehen. Potenziale erkennen. Direkt im eigenen Unternehmen anwenden.</p>
-            <a href="https://calendly.com/michel-neumann" class="btn btn-white">Termin anfragen</a>
+            <h3>KI-Abend für Unternehmer</h3>
+            <p><strong>📍 Vor Ort in Magdeburg</strong></p>
+            <ul style="margin: 15px 0; font-size: 0.9rem; list-style: none;">
+                <li>⏱ 2 Stunden | max. 10 Betriebe</li>
+                <li>💬 Austausch statt langweiliger Vortrag</li>
+                <li>💸 100 % kostenlos</li>
+            </ul>
+            <p>Erfahren Sie, wo KI bei Ihnen Geld spart – mit echten Beispielen und ohne Technik-Gerede.</p>
+            <a href="https://calendly.com/michel-neumann" class="btn btn-white">Platz sichern</a>
         </div>
     </div>
 
@@ -191,7 +191,7 @@
 </div>
 
 <footer>
-    <h2>Bereit für mehr Effizienz?</h2>
+    <h2>Bereit für den ersten Schritt?</h2>
     <p style="margin-bottom: 30px; opacity: 0.8;">Holen Sie sich den "KI-Lotsen" für Ihren Unternehmenserfolg.</p>
     <a href="https://calendly.com/michel-neumann" class="btn">Termin Michel Neumann</a>
     <a href="https://tim-lueth.de/erstgespraech" class="btn">Termin Tim Lüth</a>
