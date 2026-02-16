@@ -16,27 +16,31 @@
         .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
         .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
         
-        /* Einladungs-Box (Workshop) */
         .workshop-card { 
-            background: var(--white); color: var(--text); max-width: 600px; margin: -40px auto 40px; 
+            background: var(--white); color: var(--text); max-width: 650px; margin: -40px auto 40px; 
             padding: 30px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
             border-top: 5px solid var(--secondary); text-align: left;
         }
         .workshop-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        
+        .moderator-tag { background: #f8fafc; padding: 10px 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #e2e8f0; font-size: 0.95rem; }
+        .moderator-tag strong { color: var(--primary); }
+
         .workshop-card ul { list-style: none; margin-bottom: 20px; }
         .workshop-card li { margin-bottom: 10px; padding-left: 25px; position: relative; }
         .workshop-card li::before { content: '•'; position: absolute; left: 0; color: var(--secondary); font-size: 1.5rem; line-height: 1; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-
         .section-title { text-align: center; margin: 60px 0 30px; }
         .divider { width: 60px; height: 3px; background: var(--secondary); margin: 10px auto; }
 
-        /* Praxis-Grid */
+        /* Die echten Praxis-Beispiele */
         .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .case-study { background: white; border-radius: 10px; border-left: 6px solid var(--secondary); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .case-header { padding: 15px 20px; background: #fdfaf3; font-weight: bold; font-size: 1rem; border-bottom: 1px solid #eee; }
         .case-body { padding: 20px; }
+        .case-body small { color: var(--secondary); font-weight: bold; text-transform: uppercase; font-size: 0.75rem; }
+        .case-body p { margin-bottom: 12px; font-size: 0.95rem; }
         .result-box { background: #f0fdf4; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: var(--green); font-size: 0.9rem; margin-top: 10px; }
 
         .btn { 
@@ -49,7 +53,7 @@
 
         footer { padding: 40px 20px; text-align: center; font-size: 0.9rem; color: #666; }
 
-        @media (max-width: 850px) { .case-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2rem; } }
+        @media (max-width: 850px) { .case-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -60,69 +64,89 @@
 
 <div class="hero">
     <h1>Wir zeigen euch live, was KI bei euch kann.</h1>
-    <p>Keine Theorie, kein Verkaufsgerede – wir laden euch ein, gemeinsam echte Lösungen für euren Betrieb zu entdecken.</p>
+    <p>Keine Theorie, kein Verkaufsgerede – wir laden euch als Partner ein, gemeinsam echte Lösungen für euren Betrieb zu entdecken.</p>
 </div>
 
 <div class="workshop-card">
     <h3>📍 KI-Abend für unsere Kunden & Partner</h3>
-    <p style="margin-bottom: 15px;"><strong>Ort:</strong> Vor Ort bei uns in Magdeburg</p>
+    
+    <div class="moderator-tag">
+        Moderiert von <strong>Nico Flohr</strong> (Experte für Prozess-Automation & KI-Strategie)
+    </div>
+
+    <p style="margin-bottom: 15px;"><strong>Wo:</strong> Vor Ort bei uns in Magdeburg</p>
     <ul>
-        <li>⏱ <strong>ca. 2 Stunden</strong> in lockerer Atmosphäre</li>
+        <li>⏱ <strong>ca. 2 Stunden</strong> Experten-Wissen ohne "Tech-Blabla"</li>
         <li>👥 <strong>Kleine Runde:</strong> max. 10-12 Unternehmen</li>
-        <li>💬 <strong>Austausch statt Vortrag:</strong> Eure Fragen & Ideen zählen</li>
+        <li>💬 <strong>Fokus Praxis:</strong> Austausch zu euren konkreten Problemen</li>
         <li>🍻 <strong>Lockere Atmosphäre:</strong> Networking & Kaltgetränke</li>
         <li>💸 <strong>100% Kostenlos</strong></li>
     </ul>
     
-    <a href="https://calendly.com/michel-neumann" class="btn">Dabei sein & Platz sichern</a>
+    <a href="https://calendly.com/michel-neumann" class="btn">Platz sichern & dabei sein</a>
     
     <div class="no-sales">
-        👉 Kein Vortrag. Keine Verkaufsveranstaltung. Einfach gemeinsam verstehen.
+        👉 Austausch auf Augenhöhe. Keine Verkaufsveranstaltung.
     </div>
 </div>
 
 <div class="container">
 
     <div class="section-title">
-        <h2>Was wir gemeinsam machen</h2>
+        <h2>Echte Erfolge aus der Mittelstands-Praxis</h2>
         <div class="divider"></div>
     </div>
 
     <div class="case-grid">
         <div class="case-study">
-            <div class="case-header">Beispiele aus euren Branchen</div>
+            <div class="case-header">Automatisierung Lohn & Verwaltung</div>
             <div class="case-body">
-                <p>Wir zeigen euch konkrete Fälle aus Handwerk, Verwaltung und Technik, die wir bereits umgesetzt haben.</p>
-                <div class="result-box">Echte Praxis statt Demo-Videos</div>
+                <small>Herausforderung:</small>
+                <p>Manuelle Datenerfassung blockiert wertvolle Fachkräfte.</p>
+                <small>KI-Lösung:</small>
+                <p>KI-Schnittstellen automatisieren Buchungsprozesse und Onboarding.</p>
+                <div class="result-box">~ 14.862 € Ersparnis mtl.</div>
             </div>
         </div>
+
         <div class="case-study">
-            <div class="case-header">Live-Automatisierung</div>
+            <div class="case-header">Die "Sprechende Baustelle"</div>
             <div class="case-body">
-                <p>Wir führen live vor, wie KI heute schon Protokolle schreibt, Mails sortiert oder Angebote vorbereitet.</p>
-                <div class="result-box">Direkt zum Mitnehmen</div>
+                <small>Herausforderung:</small>
+                <p>Mühsame Berichte nach Feierabend führen zu Überstunden.</p>
+                <small>KI-Lösung:</small>
+                <p>Sprach-KI wandelt Notizen direkt in fertige Protokolle um.</p>
+                <div class="result-box">1 Std. Zeitvorteil täglich</div>
             </div>
         </div>
+
         <div class="case-study">
-            <div class="case-header">Förder-Check (80%)</div>
+            <div class="case-header">Dokumentation & Gutachten</div>
             <div class="case-body">
-                <p>Wir prüfen gemeinsam, wie ihr die 80% BAFA-Förderung für eure digitale Strategie nutzen könnt.</p>
-                <div class="result-box">Finanzieller Fahrplan steht</div>
+                <small>Herausforderung:</small>
+                <p>Stundenlange Recherche in Bestandsdaten und manuelle Text-Erstellung.</p>
+                <small>KI-Lösung:</small>
+                <p>Spezialisierte KI durchsucht Archive und erstellt Textentwürfe.</p>
+                <div class="result-box">50% Zeitersparnis bei Dokus</div>
             </div>
         </div>
+
         <div class="case-study">
-            <div class="case-header">Konkrete Ansätze</div>
+            <div class="case-header">Angebots-Generator 24/7</div>
             <div class="case-body">
-                <p>Ihr geht mit Ideen nach Hause, die ihr ab nächster Woche in eurem Betrieb testen könnt.</p>
-                <div class="result-box">Sofortiger Nutzen</div>
+                <small>Herausforderung:</small>
+                <p>Lange Wartezeiten für Kunden durch manuelle Angebotserstellung.</p>
+                <small>KI-Lösung:</small>
+                <p>KI liest Anfragen aus Mails aus und bereitet fertige Entwürfe vor.</p>
+                <div class="result-box">5x schnellere Reaktionszeit</div>
             </div>
         </div>
     </div>
 
     <div style="text-align: center; margin-top: 60px; padding: 40px; background: #fff; border-radius: 15px; border: 1px solid #e2e8f0;">
-        <h3 style="color: var(--primary);">Warum wir das machen?</h3>
+        <h3 style="color: var(--primary);">80% Förderung nutzen</h3>
         <p style="margin-top: 15px; max-width: 750px; margin-left: auto; margin-right: auto;">
-            Weil die Euphorie oft an der Umsetzung scheitert. Wir möchten euch als Partner zeigen, wie ihr den "Pilot-Sumpf" überspringt und KI als echten produktiven Mitarbeiter in euer Team holt.
+            Als Partner unterstützen wir euch auch bei der Finanzierung. Wir prüfen im Workshop direkt, wie ihr die <strong>80% BAFA-Förderung</strong> für eure Projekte nutzen könnt.
         </p>
     </div>
 
