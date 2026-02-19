@@ -30,11 +30,22 @@
         .workshop-card li { margin-bottom: 10px; padding-left: 25px; position: relative; }
         .workshop-card li::before { content: '•'; position: absolute; left: 0; color: var(--secondary); font-size: 1.5rem; line-height: 1; }
 
+        /* Formular Styling */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+        .btn-submit { 
+            background: var(--secondary); color: white; padding: 18px 35px; 
+            border: none; border-radius: 5px; font-weight: bold; display: inline-block; 
+            transition: 0.3s; width: 100%; text-align: center; font-size: 1.2rem; cursor: pointer;
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        #success-message { display:none; background: #f0fdf4; color: var(--green); padding: 20px; border-radius: 8px; text-align: center; font-weight: bold; margin-top: 20px; border: 1px solid var(--green); }
+
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         .section-title { text-align: center; margin: 60px 0 30px; }
         .divider { width: 60px; height: 3px; background: var(--secondary); margin: 10px auto; }
 
-        /* Die echten Praxis-Beispiele */
         .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .case-study { background: white; border-radius: 10px; border-left: 6px solid var(--secondary); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .case-header { padding: 15px 20px; background: #fdfaf3; font-weight: bold; font-size: 1rem; border-bottom: 1px solid #eee; }
@@ -42,15 +53,8 @@
         .case-body small { color: var(--secondary); font-weight: bold; text-transform: uppercase; font-size: 0.75rem; }
         .case-body p { margin-bottom: 12px; font-size: 0.95rem; }
         .result-box { background: #f0fdf4; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: var(--green); font-size: 0.9rem; margin-top: 10px; }
-
-        .btn { 
-            background: var(--secondary); color: white !important; padding: 18px 35px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; transition: 0.3s; width: 100%; text-align: center; font-size: 1.2rem;
-        }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         
         .no-sales { font-size: 0.85rem; margin-top: 15px; text-align: center; opacity: 0.7; font-style: italic; }
-
         footer { padding: 40px 20px; text-align: center; font-size: 0.9rem; color: #666; }
 
         @media (max-width: 850px) { .case-grid { grid-template-columns: 1fr; } }
@@ -82,9 +86,43 @@
         <li>🍻 <strong>Lockere Atmosphäre:</strong> Networking & Kaltgetränke</li>
         <li>💸 <strong>100% Kostenlos</strong></li>
     </ul>
-    
-    <a href="https://calendly.com/michel-neumann" class="btn">Platz sichern & dabei sein</a>
-    
+
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('anmeldung-form').style.display='none'; document.getElementById('success-message').style.display='block'; }"></iframe>
+
+    <div id="success-message">
+        ✅ Vielen Dank! Ihre Anmeldung wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.
+    </div>
+
+    <form id="anmeldung-form" action="https://docs.google.com/forms/d/e/1FAIpQLSejrJH0nwpbJgUoxrwIhRjwzvz78GJyZTPeM83aShFI8S8qAQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        
+        <div class="form-group">
+            <label>Firma</label>
+            <input type="text" name="entry.1823443493" class="form-control" placeholder="Ihr Unternehmen" required>
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="entry.2927558251" class="form-control" placeholder="Vor- und Nachname" required>
+        </div>
+
+        <div class="form-group">
+            <label>Anzahl Teilnehmer</label>
+            <input type="number" name="entry.707782059" class="form-control" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+            <label>E-Mail</label>
+            <input type="email" name="entry.1766637818" class="form-control" placeholder="beispiel@firma.de" required>
+        </div>
+
+        <div class="form-group">
+            <label>Telefon</label>
+            <input type="tel" name="entry.875064515" class="form-control" placeholder="Für Rückfragen">
+        </div>
+
+        <button type="submit" class="btn-submit">Jetzt verbindlich anmelden</button>
+    </form>
     <div class="no-sales">
         👉 Austausch auf Augenhöhe. Keine Verkaufsveranstaltung.
     </div>
@@ -146,7 +184,7 @@
     <div style="text-align: center; margin-top: 60px; padding: 40px; background: #fff; border-radius: 15px; border: 1px solid #e2e8f0;">
         <h3 style="color: var(--primary);">80% Förderung nutzen</h3>
         <p style="margin-top: 15px; max-width: 750px; margin-left: auto; margin-right: auto;">
-            Als Partner unterstützen wir Sie auch bei der Finanzierung. Wir prüfen im Workshop direkt, wie Sie die <strong>80% BAFA-Förderung</strong> für Ihre Projekte nutzen könnt.
+            Als Partner unterstützen wir Sie auch bei der Finanzierung. Wir prüfen im Workshop direkt, wie Sie die <strong>80% BAFA-Förderung</strong> für Ihre Projekte nutzen können.
         </p>
     </div>
 
@@ -162,6 +200,3 @@
 
 </body>
 </html>
-
-
-
